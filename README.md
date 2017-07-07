@@ -1,0 +1,2 @@
+# Visor
+Minimalist presentation tool.
