@@ -22,11 +22,3 @@ function code(e) {
 	e = e || window.event;
 	return(e.keyCode || e.which);
 }
-
-//used to escape closure issue when creating sidebar links
-function makeOnClickCallback(i) {
-	return function() {
-		loadSlide(i);
-		return false;
-	};
-}

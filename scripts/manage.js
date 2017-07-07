@@ -200,3 +200,11 @@ function addStyle(style) {
 	var content = document.getElementById('content');
 	content.insertAdjacentHTML('afterbegin', style);
 }
+
+//used to escape closure issue when creating sidebar links
+function makeOnClickCallback(i) {
+	return function() {
+		loadSlide(i);
+		return false;
+	};
+}
