@@ -183,7 +183,7 @@ a:hover {
 
 .notes {
 	position: absolute;
-	width: 50%;
+	width: calc(100% - 250px - 30px - 300px);
 	max-height: 200px;
 	bottom: 25px;
 	left: calc(250px + 30px);
