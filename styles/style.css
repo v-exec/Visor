@@ -81,8 +81,6 @@ a:hover {
 	float: left;
 	background-size: cover;
 	background-position: center;
-	overflow-y: auto;
-	overflow-x: hidden;
 }
 
 #side {
@@ -159,6 +157,8 @@ a:hover {
 	height: 100%;
 	font-family: 'Roboto';
 	padding: 60px;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 .content-title {
