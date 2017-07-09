@@ -10,7 +10,7 @@ window.onload = function(){
 		if (key == 46 && slideNum < slides.length - 1) loadSlide(slideNum + 1);
 
 		//n
-		if (key == 110 && slideNum) {
+		if (key == 110) {
 			notesVisible = !notesVisible;
 			loadSlide(slideNum);
 		}
