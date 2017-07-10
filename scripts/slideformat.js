@@ -7,7 +7,7 @@ function formatString(string, symbol) {
 	} else {
 		//all string positions
 		var positions = allStringPositions(string, symbol + '[');
-		if (positions.length > 0) {
+		while (positions.length > 0) {
 			//find closing ']'
 			var end = string.indexOf(']', positions[0]);
 
