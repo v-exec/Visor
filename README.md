@@ -36,7 +36,7 @@ The text file must contain `attributes` (information that defines the content), 
 
 `-` starting a `-` in `content` will make it part of an indented list
 
-`=` an empty line starting with `=` determines the beginning
+`=` an empty line starting with `=` determines the beginning of a slide
 
 `//comment` determines a comment and will be ignored by the parser
 
@@ -46,7 +46,7 @@ The text file must contain `attributes` (information that defines the content), 
 
 _Visor_'s parser is _not_ whitespace-based, meaning line breaks need to be declared manually by writing `+` at the start of a line.
 
-When a slide doesn't have a `con` attribute, it will automatically make the title large and centered. Otherwise, it'll create a typical
+When a slide doesn't have a `con` attribute, it will automatically make the title large and centered. Otherwise, it'll create a typical alide wirh a title at the top, and content underneath it.
 
 If any theming `attributes` are left empty, the default theme will be used.
 
@@ -56,7 +56,7 @@ Once a presentation file has been created, it simply needs to be dropped on the 
 
 The `img` attribute automatically searches in root folder called `images`.
 
-All `attributes` are optional, not including one (or many) in a slide definition is completely fine.
+All `attributes` are optional. Not including one (or many) in a slide definition is completely fine.
 
 ## Rules
 
