@@ -4,9 +4,11 @@ _Visor_ is a minimalistic presentation tool.
 
 [More information found here.](http://v-os.ca/visor)
 
-It runs locally, and requires a `.txt` file with proper syntax as slides content.
+[Online hosted instance of _Visor_ found here.](https://v-exec.github.io/Visor/)
 
-The text file must contain `attributes` (information that defines the content), which can be formatted according to `rules`.
+It uses a `.txt` file with proper syntax as the slides' content and formatting.
+
+The text file must contain `attributes` (information that defines the content), which can be formatted according to `rules` (styling).
 
 ## Attributes & Formatting
 
@@ -84,22 +86,22 @@ This repository features this same example presentation.
 
 ```
 //declaring theme
-fro: #222
-int: #aaa
-hi1: #222
-hi2: #333
+fro: #000
+int: #fff
+hi1: #000
+hi2: #000
 hi3: #aaa
 
 //background image and text color can also be declared outside of slide definition,
 //and they'll be applied to all slides until one overrwites them
 
-//img: #111
-//col: #aaa
+img: #111
+col: #aaa
 
 =my first slide (any text after an '=' isn't parsed)
 
-img: #111
-col: #aaa
+img: #222
+col: #fff
 
 sec: First Section
 til: First Slide
@@ -139,6 +141,7 @@ til: Third Slide
 
 =============4
 
-img: example image bright.jpg
+img: example image.jpg
+col: #fff
 til: Final Slide
 ```
