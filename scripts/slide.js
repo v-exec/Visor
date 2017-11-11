@@ -1,6 +1,7 @@
 //holds slide information
-function Slide(img, col, sec, til, con, not) {
+function Slide(img, sho, col, sec, til, con, not) {
 	this.img = img;
+	this.sho = sho;
 	this.col = col;
 	this.sec = sec;
 	this.til = til;
@@ -28,6 +29,7 @@ function createSlides(pres) {
 	'hi2',
 	'hi3',
 	'img',
+	'sho',
 	'col',
 	'sec',
 	'til',
@@ -37,6 +39,7 @@ function createSlides(pres) {
 
 	//attributes to be used to define slide
 	var img = '';
+	var sho = '';
 	var col = '';
 	var sec = '';
 	var til = '';
@@ -61,11 +64,12 @@ function createSlides(pres) {
 			
 			//everything before first '=' is not considered a slide, can be used to declare custom theme
 			if (atSlides) {
-				var s = new Slide(img, col, sec, til, con, not);
+				var s = new Slide(img, sho, col, sec, til, con, not);
 				slides.push(s);
 
-				//reset title, content, and notes (other values can stay, so as to avoid redundancy)
+				//reset title, independant image flag, content, and notes (other values can stay, so as to avoid redundancy)
 				til = '';
+				sho = true;
 				con = '';
 				not = '';
 			} else atSlides = true;
@@ -95,6 +99,10 @@ function createSlides(pres) {
 		switch (currentKey) {
 			case 'img':
 				img = value;
+				break;
+
+			case 'sho':
+				sho = value;
 				break;
 
 			case 'col':
@@ -140,7 +148,7 @@ function createSlides(pres) {
 		}
 	}
 	//push last slide
-	var s = new Slide(img, col, sec, til, con, not);
+	var s = new Slide(img, sho, col, sec, til, con, not);
 	slides.push(s);
 
 	//load first slide

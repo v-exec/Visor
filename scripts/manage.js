@@ -123,21 +123,23 @@ function loadContent() {
 	title.insertAdjacentHTML('afterbegin', currentSlide.til);
 	title.style.color = currentSlide.col;
 	
-	if (currentSlide.con.length == 0) {
-		title.className = 'content-big-title';
-		content.style.textAlign = "center";
-		content.style.paddingTop = "calc(50vh - 57.5px)";
-		content.appendChild(title);
-	} else {
-		title.className = 'content-title';
-		content.style.textAlign = "left";
-		content.style.paddingTop = "60px";
+	if (currentSlide.sho === "true") {
+		if (currentSlide.con.length == 0) {
+			title.className = 'content-big-title';
+			content.style.textAlign = "center";
+			content.style.paddingTop = "calc(50vh - 57.5px)";
+			content.appendChild(title);
+		} else {
+			title.className = 'content-title';
+			content.style.textAlign = "left";
+			content.style.paddingTop = "60px";
 
-		var divider = document.createElement('div');
-		divider.className = 'divider';
-		divider.style.backgroundColor = currentSlide.col;
-		content.appendChild(title);
-		content.appendChild(divider);
+			var divider = document.createElement('div');
+			divider.className = 'divider';
+			divider.style.backgroundColor = currentSlide.col;
+			content.appendChild(title);
+			content.appendChild(divider);
+		}
 	}
 
 	//content
