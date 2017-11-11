@@ -1,20 +1,20 @@
 //declaring theme
-fro: #000
-int: #fff
-hi1: #000
-hi2: #000
+fro: #222
+int: #aaa
+hi1: #222
+hi2: #333
 hi3: #aaa
 
 //background image and text color can also be declared outside of slide definition,
 //and they'll be applied to all slides until one overrwites them
 
-img: #111
-col: #aaa
+//img: #111
+//col: #aaa
 
 =my first slide (any text after an '=' isn't parsed)
 
-img: #222
-col: #fff
+img: #111
+col: #aaa
 
 sec: First Section
 til: First Slide
@@ -54,6 +54,5 @@ til: Third Slide
 
 =============4
 
-img: example image.jpg
-col: #fff
+img: example image bright.jpg
 til: Final Slide

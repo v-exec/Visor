@@ -1,8 +1,8 @@
 //set up drop zone listeners
 var dropZone = document.getElementById('drop');
 
-dropZone.addEventListener('dragover', handleDragOver);
-dropZone.addEventListener('drop', handleFileSelect);
+dropZone.addEventListener('dragover', handleDragOver, false);
+dropZone.addEventListener('drop', handleFileSelect, false);
 
 //drop handler
 function handleFileSelect(evt) {

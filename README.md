@@ -4,11 +4,9 @@ _Visor_ is a minimalistic presentation tool.
 
 [More information found here.](http://v-os.ca/visor)
 
-[Online hosted instance of _Visor_ found here.](https://v-exec.github.io/Visor/)
+It runs locally, and requires a `.txt` file with proper syntax as slides content.
 
-It uses a `.txt` file with proper syntax as the slides' content and formatting.
-
-The text file must contain `attributes` (information that defines the content), which can be formatted according to `rules` (styling).
+The text file must contain `attributes` (information that defines the content), which can be formatted according to `rules`.
 
 ## Attributes & Formatting
 
@@ -36,9 +34,9 @@ The text file must contain `attributes` (information that defines the content), 
 
 `not: notes` determines notes of the slide
 
-`-` starting a `-` in `content` will make it part of an indented list
+`-` starting a line with `-` in `content` will make it part of an indented list
 
-`=` an empty line starting with `=` determines the beginning of a slide
+`=` an empty line starting with `=` determines the beginning
 
 `//comment` determines a comment and will be ignored by the parser
 
@@ -48,7 +46,7 @@ The text file must contain `attributes` (information that defines the content), 
 
 _Visor_'s parser is _not_ whitespace-based, meaning line breaks need to be declared manually by writing `+` at the start of a line.
 
-When a slide doesn't have a `con` attribute, it will automatically make the title large and centered. Otherwise, it'll create a typical alide wirh a title at the top, and content underneath it.
+When a slide doesn't have a `con` attribute, it will automatically make the title large and centered. Otherwise, it'll create a typical
 
 If any theming `attributes` are left empty, the default theme will be used.
 
@@ -58,7 +56,7 @@ Once a presentation file has been created, it simply needs to be dropped on the 
 
 The `img` attribute automatically searches in root folder called `images`.
 
-All `attributes` are optional. Not including one (or many) in a slide definition is completely fine.
+All `attributes` are optional, not including one (or many) in a slide definition is completely fine.
 
 ## Rules
 
@@ -86,22 +84,22 @@ This repository features this same example presentation.
 
 ```
 //declaring theme
-fro: #000
-int: #fff
-hi1: #000
-hi2: #000
+fro: #222
+int: #aaa
+hi1: #222
+hi2: #333
 hi3: #aaa
 
 //background image and text color can also be declared outside of slide definition,
 //and they'll be applied to all slides until one overrwites them
 
-img: #111
-col: #aaa
+//img: #111
+//col: #aaa
 
 =my first slide (any text after an '=' isn't parsed)
 
-img: #222
-col: #fff
+img: #111
+col: #aaa
 
 sec: First Section
 til: First Slide
@@ -141,7 +139,6 @@ til: Third Slide
 
 =============4
 
-img: example image.jpg
-col: #fff
+img: example image bright.jpg
 til: Final Slide
 ```
