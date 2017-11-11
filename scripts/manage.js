@@ -123,7 +123,7 @@ function loadContent() {
 	title.insertAdjacentHTML('afterbegin', currentSlide.til);
 	title.style.color = currentSlide.col;
 	
-	if (currentSlide.sho === "true") {
+	if (currentSlide.sho !== "false") {
 		if (currentSlide.con.length == 0) {
 			title.className = 'content-big-title';
 			content.style.textAlign = "center";

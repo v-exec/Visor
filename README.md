@@ -30,6 +30,8 @@ The text file must contain `attributes` (information that defines the content), 
 
 `til: title` determines title of slide
 
+`sho: false` determines the visibility of the title
+
 `con: content` determines content of the slide
 
 `not: notes` determines notes of the slide
