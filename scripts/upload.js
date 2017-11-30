@@ -22,6 +22,7 @@ function handleFileSelect(evt) {
 		updateTimer();
 		updateClock();
 		createSlides(presentation);
+		unlockInputs = true;
 	};
 	reader.readAsText(file);
 }
