@@ -46,13 +46,13 @@ function loadSidebar() {
 
 	sideBar();
 	bars = sidebar.getElementsByTagName('*');
-	
-	bars[slideNum * 3].className = 'bar-select';
+
+	bars[slideNum * 4].className = 'bar-select';
 }
 
 //creates sidebar menu
 function sideBar() {
-	
+
 	//holds current section
 	var section;
 
@@ -60,16 +60,19 @@ function sideBar() {
 
 		//create generic elements
 		var bar = document.createElement('div');
+		var barinner = document.createElement('div');
 		var anchor = document.createElement('a');
 		var span = document.createElement('span');
 		var text = document.createTextNode(slides[i].til);
 		var num = document.createTextNode(i);
 
-		anchor.appendChild(text);
 		span.appendChild(num);
-		bar.appendChild(span);
+		barinner.appendChild(span);
+		barinner.appendChild(text);
+		anchor.appendChild(barinner);
 		bar.appendChild(anchor);
-		
+
+		barinner.className = 'bar-inner';
 		span.className = 'bar-number';
 
 		anchor.href = 'javascript:void(0)';
@@ -119,10 +122,10 @@ function loadContent() {
 
 	//title
 	var title = document.createElement('div');
-	
+
 	title.insertAdjacentHTML('afterbegin', currentSlide.til);
 	title.style.color = currentSlide.col;
-	
+
 	if (currentSlide.sho !== "false") {
 		if (currentSlide.con.length == 0) {
 			title.className = 'content-big-title';
