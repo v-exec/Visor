@@ -115,7 +115,7 @@ a:hover {
 .bar-slide,
 .bar-section,
 .bar-select {
-
+	
 	background-color: #333;
 	min-height: 40px;
 }
@@ -173,10 +173,12 @@ a:hover {
 }
 
 .content-indent {
-	display: inline-block;
+	display: block;
 	padding-left: 20px;
-	border-left: solid 4px;
-	margin-top: 20px;
+}
+
+.content-indent:before{
+	content: '\2022\0000a0';
 }
 
 .notes {
