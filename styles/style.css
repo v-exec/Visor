@@ -75,7 +75,7 @@ a:hover {
 }
 
 #side {
-	display: table-cell;
+	display: none;
 	vertical-align: top;
 	width: 250px;
 	height: 100%;
