@@ -4,6 +4,8 @@ _Visor_ is a minimalistic presentation tool.
 
 [More information found here.](http://v-os.ca/visor)
 
+To those who wish to use _Visor_ in the web, without having to download the source and run it locally, [the most recent version is available here.](https://v-exec.github.io/Visor/)
+
 It runs locally, and requires a `.txt` file with proper syntax as slides content.
 
 The text file must contain `attributes` (information that defines the content), which can be formatted according to `rules`.
