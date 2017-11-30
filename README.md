@@ -80,6 +80,8 @@ Content and notes are the only `attributes` that can be formatted with `rules`.
 
 `n` turns notes on/off on the given slide, if any are present
 
+`s` hides and unhides sidebar
+
 ## Example
 
 This repository features this same example presentation.

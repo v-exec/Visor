@@ -55,7 +55,7 @@ function loadSidebar() {
 		sideBar();
 		bars = sidebar.getElementsByTagName('*');
 		bars[slideNum * 4].className = 'bar-select';
-	}else{
+	} else {
 		sidebar.style.display = 'none';
 	}
 }
@@ -169,8 +169,15 @@ function loadContent() {
 		var notes = document.createElement('div');
 
 		notes.insertAdjacentHTML('afterbegin', currentSlide.not);
-		notes.style.color = currentSlide.col;
 		notes.className = 'notes';
+
+		if (sideVisible) {
+			notes.style.width = "calc(100% - 250px - 30px - 300px)";
+			notes.style.left = "calc(250px + 30px)";
+		} else {
+			notes.style.width = "calc(100% - 30px - 300px)";
+			notes.style.left = "30px";
+		}
 
 		content.appendChild(notes);
 	}
@@ -191,6 +198,7 @@ function loadTheme() {
 
 	if (int) {
 		addStyle('<style>body {color:' + int + ';}</style>');
+		addStyle('<style>.notes {color:' + int + ';}</style>');
 	}
 
 	if (hi1) {
