@@ -194,6 +194,7 @@ function loadTheme() {
 
 	if (hi3) {
 		addStyle('<style>.bar-select {background-color:' + hi3 + '; color: ' + fro + ';}</style>');
+		addStyle('<style>.bar-slide:hover, .bar-section:hover {background-color: ' + hi3 + '; color: ' + fro + ';}</style>');
 		addStyle('<style>::moz-selection {background:' + hi3 + ';}</style>');
 		addStyle('<style>::selection {background:' + hi3 + ';}</style>');
 		addStyle('<style>::-webkit-scrollbar-thumb {background-color:' + hi3 + ';}</style>');

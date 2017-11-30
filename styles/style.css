@@ -115,14 +115,23 @@ a:hover {
 .bar-slide,
 .bar-section,
 .bar-select {
-	
 	background-color: #333;
 	min-height: 40px;
+}
+
+.bar-slide:hover,
+.bar-section:hover {
+	background-color: #aaa;
+	color: #222;
 }
 
 #side > * > a {
 	display: block;
 	min-height: 40px;
+}
+
+#side > * > a:hover {
+	text-decoration: none;
 }
 
 .bar-inner {
