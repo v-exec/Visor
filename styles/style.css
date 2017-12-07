@@ -66,6 +66,7 @@ a:hover {
 	display: table;
 	width: 100%;
 	height: 100%;
+	transition: all 0.5s ease-in-out;
 }
 
 #body {
@@ -129,6 +130,10 @@ a:hover {
 .bar-section:hover {
 	background-color: #aaa;
 	color: #222;
+}
+
+#side{
+	display: table-cell;
 }
 
 #side > * > a {
