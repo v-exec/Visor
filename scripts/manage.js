@@ -11,7 +11,9 @@ var presentation = [];
 var notesVisible = false;
 
 //sidebar visibility
-var sideVisible = true;
+var sideVisible = false;
+grid.style.width = "calc(100% + 250px)";
+grid.style.marginLeft = "-250px";
 
 //keybindings will not work before file is placed in hotzone
 var unlockInputs = false;
@@ -49,14 +51,17 @@ function loadSidebar() {
 	while (sidebar.firstChild) {
 		sidebar.removeChild(sidebar.firstChild);
 	}
+    
+	sideBar();
+	bars = sidebar.getElementsByTagName('*');
+	bars[slideNum * 4].className = 'bar-select';
 	
-	if(sideVisible){
-		sidebar.style.display = 'table-cell';
-		sideBar();
-		bars = sidebar.getElementsByTagName('*');
-		bars[slideNum * 4].className = 'bar-select';
+	if (sideVisible) {
+		grid.style.width = "calc(100%)";
+		grid.style.marginLeft = "0";
 	} else {
-		sidebar.style.display = 'none';
+		grid.style.width = "calc(100% + 250px)";
+		grid.style.marginLeft = "-250px";
 	}
 }
 
