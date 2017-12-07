@@ -10,6 +10,12 @@ var presentation = [];
 //note visibility
 var notesVisible = false;
 
+//sidebar visibility
+var sideVisible = true;
+
+//keybindings will not work before file is placed in hotzone
+var unlockInputs = false;
+
 //colors
 var fro;
 var int;
@@ -43,11 +49,15 @@ function loadSidebar() {
 	while (sidebar.firstChild) {
 		sidebar.removeChild(sidebar.firstChild);
 	}
-
-	sideBar();
-	bars = sidebar.getElementsByTagName('*');
-
-	bars[slideNum * 4].className = 'bar-select';
+	
+	if(sideVisible){
+		sidebar.style.display = 'table-cell';
+		sideBar();
+		bars = sidebar.getElementsByTagName('*');
+		bars[slideNum * 4].className = 'bar-select';
+	} else {
+		sidebar.style.display = 'none';
+	}
 }
 
 //creates sidebar menu
@@ -159,8 +169,15 @@ function loadContent() {
 		var notes = document.createElement('div');
 
 		notes.insertAdjacentHTML('afterbegin', currentSlide.not);
-		notes.style.color = currentSlide.col;
 		notes.className = 'notes';
+
+		if (sideVisible) {
+			notes.style.width = "calc(100% - 250px - 30px - 300px)";
+			notes.style.left = "calc(250px + 30px)";
+		} else {
+			notes.style.width = "calc(100% - 30px - 300px)";
+			notes.style.left = "30px";
+		}
 
 		content.appendChild(notes);
 	}
@@ -181,6 +198,7 @@ function loadTheme() {
 
 	if (int) {
 		addStyle('<style>body {color:' + int + ';}</style>');
+		addStyle('<style>.notes {color:' + int + ';}</style>');
 	}
 
 	if (hi1) {

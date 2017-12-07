@@ -32,12 +32,10 @@ til: Second Slide
 con:
 Here's some _[italic] and *[bold] content.
 +
++
 -List
-+
 -Of
-+
 -Points
-+
 +
 And some more text.
 
@@ -51,6 +49,15 @@ col: #000
 
 sec: New Section
 til: Third Slide
+
+con:
+Longer piece of text.
++
++
+With some spaces.
++
++
+Here.
 
 =============4
 
