@@ -1,3 +1,5 @@
+//stats tracking
+
 //holds time since beginning of slides
 var seconds = 0;
 var minutes = 0;

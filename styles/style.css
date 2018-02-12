@@ -4,8 +4,7 @@ html, body {
 	background-color: #111;
 	overflow: hidden;
 	font-weight: 400;
-	color: #aaa;
-	font-family: "Roboto Mono";
+	color: #eee;
 	font-size: 14px;
 }
 
@@ -29,22 +28,22 @@ a:hover {
 }
 
 ::-moz-selection {
-	color: #111;
-	background: #aaa;
+	color: #222;
+	background: #eee;
 }
 
 ::selection {
-	color: #111;
-	background: #aaa;
+	color: #222;
+	background: #eee;
 }
 
 ::-webkit-scrollbar {
 	width: 4px;
-	background-color: #444;
+	background-color: #222;
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #aaa;
+	background-color: #eee;
 }
 
 /*-----------DROP ZONE-----------*/
@@ -56,9 +55,11 @@ a:hover {
 	margin: auto;
 	background-color: #222;
 	text-align: center;
-	padding-top: calc(100px - 16px / 2);
+	padding-top: calc(100px - 24px / 2);
 	font-weight: 400;
-	font-family: 'Roboto Mono';
+	font-family: 'Roboto';
+	font-size: 20px;
+	border-radius: 2px;
 }
 
 /*-----------STATIC-----------*/
@@ -81,6 +82,7 @@ a:hover {
 	height: 100%;
 	background-color: #222;
 	overflow-y: auto;
+	padding: 0px 20px 20px 20px;
 }
 
 #clock,
@@ -94,6 +96,7 @@ a:hover {
 	background-color: #222;
 	text-align: center;
 	padding-top: 7px;
+	border-radius: 2px;
 }
 
 #timer {
@@ -119,37 +122,38 @@ a:hover {
 
 /*-----------DYNAMIC - SIDEBAR-----------*/
 .bar-slide,
-.bar-section,
 .bar-select {
-	background-color: #333;
-	min-height: 40px;
+	background-color: #222;
+	font-weight: 400;
+	border-radius: 2px;
 }
 
-.bar-slide:hover,
-.bar-section:hover {
-	background-color: #aaa;
+.bar-section {
+	background-color: none;
+	font-weight: 700;
+	color: #666;
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+.bar-slide:hover {
+	background-color: #eee;
 	color: #222;
 }
 
 #side > * > a {
 	display: block;
-	min-height: 40px;
 }
 
 #side > * > a:hover {
 	text-decoration: none;
 }
 
-.bar-inner {
-	padding: 10px;
-	padding-top: calc(20px - 7px);
-	padding-bottom: calc(20px - 7px);
-	width: 100%;
-	min-height: 40px;
-}
-
+.bar-inner,
 .bar-section {
-	background-color: #444;
+	padding: 8px;
+	width: 100%;
+	margin-bottom: 10px;
 }
 
 .bar-number {
@@ -158,7 +162,7 @@ a:hover {
 }
 
 .bar-select {
-	background-color: #aaa;
+	background-color: #eee;
 	color: #222;
 }
 
@@ -166,7 +170,6 @@ a:hover {
 #content {
 	width: 100%;
 	height: 100%;
-	font-family: 'Roboto';
 	padding: 60px;
 	background-size: cover;
 	background-position: center;

@@ -1,22 +1,18 @@
 //declaring theme
 fro: #222
-int: #aaa
-hi1: #222
-hi2: #333
-hi3: #aaa
+int: #eee
+hil: #666
 
 //background image and text color can also be declared outside of slide definition,
-//and they'll be applied to all slides until one overrwites them
+//and they'll be applied to all slides until they're overwritten
 
 //img: #111
 //col: #aaa
 
 =my first slide (any text after an '=' isn't parsed)
-
-img: #111
-col: #aaa
-
 sec: First Section
+img: #111
+col: #eee
 til: First Slide
 
 not:
@@ -26,7 +22,6 @@ Just a few notes.
 Nothing special.
 
 =second slide
-
 til: Second Slide
 
 con:
@@ -43,11 +38,9 @@ not:
 And some notes, along with a #[link>https://github.com/v-exec/Visor].
 
 =============3
-
-img: #fff
-col: #000
-
 sec: New Section
+img: #fff
+col: #111
 til: Third Slide
 
 con:
@@ -60,6 +53,5 @@ With some spaces.
 Here.
 
 =============4
-
 img: example image bright.jpg
 til: Final Slide

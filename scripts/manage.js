@@ -1,3 +1,5 @@
+//core
+
 //holds all slides
 var slides = [];
 
@@ -19,9 +21,7 @@ var unlockInputs = false;
 //colors
 var fro;
 var int;
-var hi1;
-var hi2;
-var hi3;
+var hil;
 
 //loads relevant presentation information
 function loadSlide(n) {
@@ -50,11 +50,22 @@ function loadSidebar() {
 		sidebar.removeChild(sidebar.firstChild);
 	}
 	
-	if(sideVisible){
+	if (sideVisible) {
 		sidebar.style.display = 'table-cell';
 		sideBar();
 		bars = sidebar.getElementsByTagName('*');
-		bars[slideNum * 4].className = 'bar-select';
+		var b = [];
+		for(var i = 0, n; n = bars[i]; ++i) b.push(n);
+
+		//clean section headers
+		for (var i = 0; i < b.length; i++) {
+			if (b[i].className == "bar-section") {
+				b.splice(i, 1);
+				i--;
+			}
+		}
+
+		b[slideNum * 4].className = 'bar-select';
 	} else {
 		sidebar.style.display = 'none';
 	}
@@ -91,9 +102,12 @@ function sideBar() {
 		//make special bar for first section slide
 		if (slides[i].sec != section) {
 			section = slides[i].sec;
-			bar.className = 'bar-section';
-			document.getElementById('side').appendChild(bar);
-			continue;
+
+			var banner = document.createElement('div');
+			var bannertext = document.createTextNode(section);
+			banner.appendChild(bannertext);
+			banner.className = 'bar-section';
+			document.getElementById('side').appendChild(banner);
 		}
 
 		//otherwise, make regular bar
@@ -199,23 +213,16 @@ function loadTheme() {
 	if (int) {
 		addStyle('<style>body {color:' + int + ';}</style>');
 		addStyle('<style>.notes {color:' + int + ';}</style>');
+		addStyle('<style>::-webkit-scrollbar {background-color: ' + int + ';}</style>');
+		addStyle('<style>.bar-select {background-color:' + int + '; color: ' + fro + ';}</style>');
+		addStyle('<style>.bar-slide:hover {background-color: ' + int + '; color: ' + fro + ';}</style>');
+		addStyle('<style>::moz-selection {background:' + int + ';}</style>');
+		addStyle('<style>::selection {background:' + int + ';}</style>');
+		addStyle('<style>::-webkit-scrollbar-thumb {background-color:' + int + ';}</style>');
 	}
 
-	if (hi1) {
-		addStyle('<style>.bar-slide {background-color:' + hi1 + ';}</style>');
-		addStyle('<style>::-webkit-scrollbar {background-color: ' + hi1 + ';}</style>');
-	}
-
-	if (hi2) {
-		addStyle('<style>.bar-section {background-color:' + hi2 + ';}</style>');
-	}
-
-	if (hi3) {
-		addStyle('<style>.bar-select {background-color:' + hi3 + '; color: ' + fro + ';}</style>');
-		addStyle('<style>.bar-slide:hover, .bar-section:hover {background-color: ' + hi3 + '; color: ' + fro + ';}</style>');
-		addStyle('<style>::moz-selection {background:' + hi3 + ';}</style>');
-		addStyle('<style>::selection {background:' + hi3 + ';}</style>');
-		addStyle('<style>::-webkit-scrollbar-thumb {background-color:' + hi3 + ';}</style>');
+	if (hil) {
+		addStyle('<style>.bar-section {color:' + hil + ';}</style>');
 	}
 }
 

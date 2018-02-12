@@ -1,3 +1,5 @@
+//doc loader
+
 //set up drop zone listeners
 var dropZone = document.getElementById('drop');
 

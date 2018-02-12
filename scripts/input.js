@@ -1,3 +1,5 @@
+//input handler
+
 //track keyboard input
 window.onload = function(){
 	document.onkeypress = function(e){

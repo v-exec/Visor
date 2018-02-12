@@ -1,3 +1,5 @@
+//slide object
+
 //holds slide information
 function Slide(img, sho, col, sec, til, con, not) {
 	this.img = img;
@@ -25,9 +27,7 @@ function createSlides(pres) {
 	var attributes = [
 	'fro',
 	'int',
-	'hi1',
-	'hi2',
-	'hi3',
+	'hil',
 	'img',
 	'sho',
 	'col',
@@ -134,16 +134,8 @@ function createSlides(pres) {
 				int = value;
 				break;
 
-			case 'hi1':
-				hi1 = value;
-				break;
-
-			case 'hi2':
-				hi2 = value;
-				break;
-
-			case 'hi3':
-				hi3 = value;
+			case 'hil':
+				hil = value;
 				break;
 		}
 	}

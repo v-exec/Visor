@@ -1,3 +1,5 @@
+//slide parser
+
 //formats string to support links #[text>link], bolding *[text], and italics _[text]
 function formatString(string, symbol) {
 
