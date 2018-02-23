@@ -209,4 +209,5 @@ a:hover {
 	padding: 40px;
 	overflow-y: auto;
 	text-align: left;
+	border-radius: 2px;
 }
