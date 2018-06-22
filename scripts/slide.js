@@ -90,7 +90,7 @@ function createSlides(pres) {
 
 		//if key wasn't found, continue adding to the previously acquired attribute while looking for declared line breaks
 		if (!newKey) {
-			if (pres[i].substring(0, 1) === '+' value = value + '<br>';
+			if (pres[i].substring(0, 1) === '+') value = value + '<br>';
 			else if (pres[i].substring(0, 1) === '-') value = value + '<span class="content-indent">' + pres[i].substring(1, pres[i].length) + '</span>';
 			else value = value + pres[i];
 		}
