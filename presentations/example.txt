@@ -42,6 +42,7 @@ sec: New Section
 img: #fff
 col: #111
 til: Third Slide
+sho: false
 
 con:
 Longer piece of text.
@@ -50,8 +51,9 @@ Longer piece of text.
 With some spaces.
 +
 +
-Here.
+No title.
 
 =============4
-img: example image bright.jpg
+img: example image.png
 til: Final Slide
+sho: false

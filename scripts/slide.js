@@ -57,7 +57,7 @@ function createSlides(pres) {
 		newKey = false;
 
 		//skip lines starting with '//' and empty lines
-		if (pres[i].substring(0, 2) === '//' || pres[i].length == 1) continue;
+		if (pres[i].substring(0, 2) === '//' || pres[i].trim() === '') continue;
 
 		//start new slide if line starts with '='
 		if (pres[i].substring(0, 1) === '=') {
@@ -88,9 +88,9 @@ function createSlides(pres) {
 			}
 		}
 
-		//if key wasn't found, continue adding to the previously acquired attribute
+		//if key wasn't found, continue adding to the previously acquired attribute while looking for declared line breaks
 		if (!newKey) {
-			if (pres[i].length == 2 && pres[i].substring(0, 1) === '+') value = value + '<br>';
+			if (pres[i].substring(0, 1) === '+' && pres[i].substring(1, 1) !== '+') value = value + '<br>';
 			else if (pres[i].substring(0, 1) === '-') value = value + '<span class="content-indent">' + pres[i].substring(1, pres[i].length) + '</span>';
 			else value = value + pres[i];
 		}
