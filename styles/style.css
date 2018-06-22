@@ -157,8 +157,10 @@ a:hover {
 }
 
 .bar-number {
+	display: inline-block;
 	float: right;
 	vertical-align: top;
+	margin-left: 10px;
 }
 
 .bar-select {
