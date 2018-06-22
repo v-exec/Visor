@@ -51,7 +51,7 @@ function loadSidebar() {
 	}
 	
 	if (sideVisible) {
-		sidebar.style.display = 'table-cell';
+		sidebar.style.display = 'inline-block';
 		sideBar();
 		bars = sidebar.getElementsByTagName('*');
 		var b = [];
