@@ -4,11 +4,11 @@ _Visor_ is a minimalistic presentation tool.
 
 [More information found here.](http://v-os.ca/visor)
 
-To those who wish to use _Visor_ in the web, without having to download the source and run it locally, [the most recent version is available here.](https://v-exec.github.io/Visor/)
-
 It runs locally, and requires a `.txt` file with proper syntax as slides content.
 
-The text file must contain `attributes` (information that defines the content), which can be formatted according to `rules` (simple .
+The text file must contain `attributes` (information that defines the content), which can be formatted according to `rules` (simple inline formatting syntax).
+
+To those who wish to use _Visor_ in the web, without having to download the source and run it locally, [it is hosted here.](https://v-exec.github.io/Visor/) No custom images can be used if _Visor_ is not hosted locally.
 
 ## Attributes & Formatting
 
@@ -46,22 +46,6 @@ The text file must contain `attributes` (information that defines the content), 
 
 `+` determines a line break
 
-### Details
-
-_Visor_'s parser is _not_ whitespace-based, meaning line breaks need to be declared manually by writing `+` at the start of a line.
-
-When a slide doesn't have a `con` attribute, it will automatically make the title large and centered. Otherwise, it'll create a typical slide.
-
-If any theming `attributes` are left empty, the default theme will be used for that `attribute`.
-
-If `attributes` like `img`, `sec`, or `col` are left empty after they've been previously declared, future slides will retain the same `img`, `sec`, and `col`, meaning that there's no need to redundantly describe each slide's section, image, and text color, if it's the same as the previous slide.
-
-Once a presentation file has been created, it simply needs to be dropped on the drop zone seen when opening _Visor_'s `index.html` file.
-
-The `img` attribute automatically searches in root folder called `images`.
-
-All `attributes` are optional, not including one (or many) in a slide definition is completely fine.
-
 ## Rules
 
 `#[text>link]` creates link
@@ -83,6 +67,22 @@ Content and notes are the only `attributes` that can be formatted with `rules`.
 `n` turns notes on/off on the given slide, if any are present
 
 `s` hides and unhides sidebar
+
+### Details
+
+_Visor_'s parser is _not_ whitespace-based, meaning line breaks need to be declared manually by writing `+` at the start of a line.
+
+When a slide doesn't have a `con` attribute, it will automatically make the title large and centered. Otherwise, it'll create a typical slide.
+
+If any theming `attributes` are left empty, the default theme will be used for that `attribute`.
+
+If `attributes` like `img`, `sec`, or `col` are left empty after they've been previously declared, future slides will retain the same `img`, `sec`, and `col`, meaning that there's no need to redundantly describe each slide's section, image, and text color, if it's the same as the previous slide.
+
+Once a presentation file has been created, it simply needs to be dropped on the drop zone seen when opening _Visor_'s `index.html` file.
+
+The `img` attribute automatically searches in root folder called `images`.
+
+All `attributes` are optional, not including one (or many) in a slide definition is completely fine.
 
 ## Example
 
