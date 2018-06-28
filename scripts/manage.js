@@ -66,6 +66,8 @@ function loadSidebar() {
 		}
 
 		b[slideNum * 4].className = 'bar-select';
+		if (slideNum * 4 == 0) sidebar.scrollTop = 0;
+		else b[slideNum * 4].scrollIntoView({behavior: "instant", block: "nearest"});
 	} else {
 		sidebar.style.display = 'none';
 	}
