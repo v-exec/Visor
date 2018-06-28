@@ -115,6 +115,8 @@ function createSlides(pres) {
 
 			case 'til':
 				til = value;
+				//check if title is empty - make single dot to retain formatting
+				if (til === '') til = '·';
 				break;
 
 			case 'con':
