@@ -212,6 +212,7 @@ function loadTheme() {
 		addStyle('<style>::moz-selection {color:' + fro + ';}</style>');
 		addStyle('<style>::selection {color:' + fro + ';}</style>');
 		addStyle('<style>.bar-select {color: ' + fro + ';}</style>');
+		addStyle('<style>.bar-slide {background-color: ' + fro + ';}</style>');
 	}
 
 	if (int) {
