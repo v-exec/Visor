@@ -5,7 +5,6 @@ hil: #666
 
 //background image and text color can also be declared outside of slide definition,
 //and they'll be applied to all slides until they're overwritten
-
 //img: #111
 //col: #aaa
 
@@ -42,6 +41,8 @@ sec: New Section
 img: #fff
 col: #111
 til: Third Slide
+
+//hiding title
 sho: false
 
 con:

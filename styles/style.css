@@ -59,7 +59,7 @@ a:hover {
 	font-weight: 400;
 	font-family: 'Roboto';
 	font-size: 20px;
-	border-radius: 2px;
+	border-radius: 3px;
 }
 
 /*-----------STATIC-----------*/
@@ -97,7 +97,7 @@ a:hover {
 	background-color: #222;
 	text-align: center;
 	padding-top: 7px;
-	border-radius: 2px;
+	border-radius: 3px;
 }
 
 #timer {
@@ -118,7 +118,7 @@ a:hover {
 	width: 100%;
 	height: 4px;
 	margin-bottom: 30px;
-	margin-top: 30px;
+	border-radius: 5px;
 }
 
 /*-----------DYNAMIC - SIDEBAR-----------*/
@@ -126,7 +126,7 @@ a:hover {
 .bar-select {
 	background-color: #222;
 	font-weight: 400;
-	border-radius: 2px;
+	border-radius: 3px;
 }
 
 .bar-section {
@@ -182,6 +182,7 @@ a:hover {
 
 .content-title {
 	font-size: 60px;
+	margin-bottom: 30px;
 }
 
 .content-big-title {
@@ -212,5 +213,5 @@ a:hover {
 	padding: 40px;
 	overflow-y: auto;
 	text-align: left;
-	border-radius: 2px;
+	border-radius: 3px;
 }
