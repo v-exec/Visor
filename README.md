@@ -8,7 +8,7 @@ It runs locally, and requires a `.txt` file with proper syntax as slides content
 
 The text file must contain `attributes` (information that defines the content), which can be formatted according to `rules` (simple inline formatting syntax).
 
-To those who wish to use _Visor_ in the web, without having to download the source and run it locally, [it is hosted here.](https://v-exec.github.io/Visor/) No custom images can be used if _Visor_ is not hosted locally.
+To those who wish to use _Visor_ in the web, without having to download the source and run it locally, [it is hosted here.](http://exp.v-os.ca/visor) No custom images can be used if _Visor_ is not hosted locally.
 
 ## Attributes & Formatting
 
